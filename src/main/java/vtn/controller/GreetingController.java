@@ -34,4 +34,9 @@ public class GreetingController {
     public String getAuthor() {
         return "Victor Nguyen";
     }
+
+    @RequestMapping("err")
+    public String error(Model model) {
+        throw new RuntimeException("Sample for error!");
+    }
 }
